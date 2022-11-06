@@ -3,6 +3,7 @@ package ru.hogwarts.school.model;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -23,6 +24,7 @@ public class Faculty {
         this.id = 0L;
         this.name = name;
         this.color = color;
+        this.students = new HashSet<>();
     }
 
     public String getName() {
@@ -74,4 +76,5 @@ public class Faculty {
     public Set<Student> getStudents() {
         return students.stream().collect(Collectors.toUnmodifiableSet());
     }
+
 }
