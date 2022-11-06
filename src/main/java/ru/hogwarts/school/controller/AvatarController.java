@@ -20,6 +20,7 @@ import java.rmi.RemoteException;
 public class AvatarController {
     private AvatarService avatarService;
 
+    public AvatarController() {}
     public AvatarController(AvatarService avatarService) {
         this.avatarService = avatarService;
     }

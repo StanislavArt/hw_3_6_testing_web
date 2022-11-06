@@ -13,8 +13,9 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("student")
 public class StudentController {
-    private final StudentService studentService;
+    private StudentService studentService;
 
+    public  StudentController() {}
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
